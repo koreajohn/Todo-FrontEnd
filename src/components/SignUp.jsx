@@ -7,7 +7,7 @@ import { signUp } from '../api/userApi'
 const SignUp = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    email: '',
+    username: '',
     password: ''
   });
   const [errors, setErrors] = useState({});
@@ -23,10 +23,10 @@ const SignUp = () => {
   const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.email) {
-      newErrors.email = '이메일을 입력해주세요';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = '올바른 이메일 형식이 아닙니다';
+    if (!formData.username) {
+      newErrors.username = '이메일을 입력해주세요';
+    } else if (!/\S+@\S+\.\S+/.test(formData.username)) {
+      newErrors.username = '올바른 이메일 형식이 아닙니다';
     }
 
     if (!formData.password) {
@@ -78,14 +78,14 @@ const SignUp = () => {
           <label className="block text-sm font-medium text-gray-700">이메일</label>
           <input
             type="email"
-            name="email"
-            value={formData.email}
+            name="username"
+            value={formData.username}
             onChange={handleChange}
             ref={emailRef} // 이메일 input에 ref 추가
             className="w-full p-2 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
             placeholder="이메일을 입력하세요"
           />
-          {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+          {errors.username && <p className="text-red-500 text-sm">{errors.username}</p>}
         </div>
 
         <div className="space-y-2">
