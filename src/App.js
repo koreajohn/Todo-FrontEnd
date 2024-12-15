@@ -6,6 +6,9 @@ import Todo from './components/Todo';
 import Calendar from './components/Calendar';
 
 function App() {
+  console.log('React app starting...');
+console.log('Environment:', process.env.NODE_ENV);
+console.log('API URL:', process.env.REACT_APP_SERVER_IP);
   return (
     <BrowserRouter>
       <Routes>

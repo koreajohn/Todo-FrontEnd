@@ -1,16 +1,7 @@
-// apiConfig.js
-
-// 환경변수가 없을 경우 기본값 설정
-const BASE_URL = API_SERVER_HOST || 'https://todocalendar.shop';
-console.log('Using URL:', BASE_URL);
-console.log('API_SERVER_HOST:', API_SERVER_HOST); // undefined인지 확인
-export const LOGIN = `${BASE_URL}/api/login`;
-console.log('Login endpoint:', LOGIN); 
-
-
+ 
 const API_SERVER_HOST = process.env.REACT_APP_SERVER_IP;
 export const SIGNUP = `${API_SERVER_HOST}/api/signUp`;
-//export const LOGIN = `${API_SERVER_HOST}/api/login`;
+export const LOGIN = `${API_SERVER_HOST}/api/login`;
 
 // Todo endpoints
 export const TODO_SAVE = `${API_SERVER_HOST}/api/todoSave`;
