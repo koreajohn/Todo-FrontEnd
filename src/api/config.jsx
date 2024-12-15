@@ -1,6 +1,5 @@
-const Server_IP = process.env.REACT_APP_Server_IP;
-
-export const API_SERVER_HOST = Server_IP;
+ 
+const Server_IP = process.env.REACT_APP_SERVER_IP;
 export const SIGNUP = `${API_SERVER_HOST}/api/signUp`;
 export const LOGIN = `${API_SERVER_HOST}/api/login`;
 
