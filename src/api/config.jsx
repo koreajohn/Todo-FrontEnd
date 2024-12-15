@@ -1,5 +1,8 @@
- 
-const API_SERVER_HOST = process.env.REACT_APP_SERVER_IP;
+const API_SERVER_HOST = process.env.REACT_APP_SERVER_IP || 'https://todocalendar.shop';
+console.log('API HOST:', API_SERVER_HOST); 
+
+
+
 export const SIGNUP = `${API_SERVER_HOST}/api/signUp`;
 export const LOGIN = `${API_SERVER_HOST}/api/login`;
 
