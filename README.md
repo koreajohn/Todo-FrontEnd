@@ -5,10 +5,10 @@ Todo list & Calendar 앱
 실행 방법
 1. 폴더생성 후 Git Gash Here 클릭 
 2. git clone -b master https://github.com/koreajohn/Todo-FrontEnd.git 
-3. VsCoke 또는 Intellij 등 작업가능한 툴에서 오픈
+3. VsCode 또는 Intellij 등 작업가능한 툴에서 오픈
 4. 작업툴 안에서 터미널 생성 후 해당 모듈 설치 npm install react-scripts
 5. 터미널에서 npm start
-6. 
+   
 주력으로 사용한 컴포넌트 및 사용 이유 
 1. 상태 관리 컴포넌트
 useState: Todo 목록, 캘린더 이벤트, 입력값 등의 데이터 상태를 관리
