@@ -20,6 +20,7 @@ npm install react-scripts
 npm start
 
 🛠️ 주요 컴포넌트 및 기술 스택
+
 ⚡ 상태 관리
 
 useState
