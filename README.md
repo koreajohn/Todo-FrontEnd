@@ -1,8 +1,10 @@
 📅 Todo List & Calendar App
 💫 소개
 Todo List와 Calendar에서 일정을 등록하고 양방향으로 확인할 수 있는 통합 일정 관리 애플리케이션입니다.
+
 🚀 실행 방법
 bashCopy# 1. 원하는 폴더에서 Git Bash 실행
+
 # 2. 프로젝트 클론
 git clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
 
