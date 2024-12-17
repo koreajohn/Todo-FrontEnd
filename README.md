@@ -7,7 +7,8 @@ Todo List와 Calendar에서 일정을 등록하고 양방향으로 확인할 수
 🚀 실행 방법
 
 1️⃣ 프로젝트 클론
-bashCopygit clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
+
+clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
 
 2️⃣ 프로젝트 설정
 
