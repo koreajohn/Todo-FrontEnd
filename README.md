@@ -1,9 +1,14 @@
 📅 Todo List & Calendar App
+
 💫 소개
+
 Todo List와 Calendar에서 일정을 등록하고 양방향으로 확인할 수 있는 통합 일정 관리 애플리케이션입니다.
+
 🚀 실행 방법
+
 1️⃣ 프로젝트 클론
 bashCopygit clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
+
 2️⃣ 프로젝트 설정
 
 VS Code나 IntelliJ 등 선호하는 IDE에서 프로젝트 오픈
@@ -13,14 +18,11 @@ bashCopynpm install react-scripts
 
 3️⃣ 서버 실행
 bashCopynpm start
+
 🛠️ 기술 스택
+
 <div align="center">
 🌟 Tech Stack 🌟
-Show Image
-Show Image
-Show Image
-Show Image
-<br/>
 🎨 Frontend
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
@@ -32,8 +34,12 @@ Show Image
 <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
 <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white"/>
 </div>
+</br>
+
 📚 주요 기능
+
 ⚡ 상태 관리
+
 <details>
 <summary><b>상세 보기</b></summary>
 useState
