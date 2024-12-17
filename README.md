@@ -39,9 +39,9 @@ bashCopynpm start
 📚 주요 기능
 
 ⚡ 상태 관리
-
 <details>
 <summary><b>상세 보기</b></summary>
+기능
 useState
 
 Todo 목록, 캘린더 이벤트, 입력값 관리
@@ -52,73 +52,82 @@ useEffect
 데이터 로딩 및 JWT 토큰 검증
 API 통신 처리
 
+사용 이유
+
+컴포넌트 내의 동적 데이터 효율적 관리
+상태 변화에 따른 자동 리렌더링
+비동기 작업의 부작용 관리
+컴포넌트 생명주기 이벤트 처리
+
 </details>
 🎯 사용자 입력 처리
 <details>
 <summary><b>상세 보기</b></summary>
+기능
 useRef
 
 입력 필드 포커스 최적화
 DOM 요소 직접 접근 관리
 
+사용 이유
+
+불필요한 리렌더링 방지
+DOM 요소의 직접적인 조작 가능
+포커스 관리를 통한 UX 향상
+컴포넌트 생명주기 간 값 유지
+
 </details>
 🔄 라우팅
 <details>
 <summary><b>상세 보기</b></summary>
+기능
 useNavigate
 
 페이지 간 이동 처리
 인증 실패 시 리다이렉션
 
+사용 이유
+
+SPA 내 페이지 전환의 부드러운 처리
+프로그래매틱 네비게이션 구현
+보안 관련 리다이렉션 처리
+사용자 경험 최적화
+
 </details>
 💅 UI/UX
 <details>
 <summary><b>상세 보기</b></summary>
+기능
 Lucide React
 
 모던한 아이콘 시스템
 직관적인 사용자 인터페이스
 
+사용 이유
+
+일관된 디자인 언어 제공
+SVG 기반의 고품질 아이콘
+커스터마이징 용이성
+번들 사이즈 최적화
+
 </details>
 📊 커스텀 컴포넌트
 <details>
 <summary><b>상세 보기</b></summary>
+기능
 TodoProgress
 
 진행 상황 시각화
 재사용 가능한 모듈식 설계
 
+사용 이유
+
+코드 재사용성 극대화
+UI 일관성 유지
+유지보수 용이성
+컴포넌트 기반 개발 지원
+
 </details>
-✨ 핵심 특징
-📌 효율적인 상태 관리
-
-React Hooks 활용
-클린한 비동기 처리
-
-🎨 최적화된 사용자 경험
-
-자동 포커스 기능
-실시간 UI 업데이트
-직관적인 디자인
-
-📝 체계적인 코드 구조
-
-관심사 분리 원칙 적용
-컴포넌트 재사용성 극대화
-유지보수 친화적 설계
-
-🔒 보안 강화
-
-JWT 기반 인증 시스템
-보호된 라우팅
-견고한 에러 처리
-
-⚡ 성능 최적화
-
-효율적인 컴포넌트 렌더링
-최적화된 상태 업데이트
-
-
 <div align="center">
 © 2024 Todo List & Calendar App - Developed with ❤️ by koreajohn
 </div>
