@@ -61,6 +61,7 @@ API 통신 처리
 
 </details>
 🎯 사용자 입력 처리
+</br>
 <details>
 <summary><b>상세 보기</b></summary>
 기능
@@ -78,6 +79,7 @@ DOM 요소의 직접적인 조작 가능
 
 </details>
 🔄 라우팅
+</br>
 <details>
 <summary><b>상세 보기</b></summary>
 기능
@@ -95,6 +97,7 @@ SPA 내 페이지 전환의 부드러운 처리
 
 </details>
 💅 UI/UX
+</br>
 <details>
 <summary><b>상세 보기</b></summary>
 기능
@@ -112,6 +115,7 @@ SVG 기반의 고품질 아이콘
 
 </details>
 📊 커스텀 컴포넌트
+</br>
 <details>
 <summary><b>상세 보기</b></summary>
 기능
