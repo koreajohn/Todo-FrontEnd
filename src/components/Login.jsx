@@ -73,6 +73,7 @@ const Login = () => {
                 message: error.message,
                 response: error.response?.data
             });
+            alert('비밀번호 또는 아이디를 확인해주세요.');
             setSubmitStatus('error');
         }
     }

@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, List, LogIn, UserPlus, LogOut } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { getTodoList } from '../api/todoApi';
 
 const Main = () => {
   const [selectedList, setSelectedList] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState('');
+  const [todos, setTodos] = useState([]);
+  const [lists, setLists] = useState([
+    { id: 1, title: "업무 할일", count: 0, type: "work" },
+    { id: 2, title: "개인 일정", count: 0, type: "personal" }
+  ]);
   const navigate = useNavigate();
+
   useEffect(() => {
-    // 컴포넌트 마운트 시 로그인 상태 확인
     const token = localStorage.getItem('token');
     if (token) {
       setIsLoggedIn(true);
-      // JWT에서 사용자 정보 추출
       try {
         const base64Url = token.split('.')[1];
         const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -26,16 +31,50 @@ const Main = () => {
       }
     }
   }, []);
-  const lists = [
-    { id: 1, title: "업무 할일", count: 5, type: "work" },
-    { id: 2, title: "개인 일정", count: 3, type: "personal" }
-  ];
+
+  useEffect(() => {
+    const loadTodos = async () => {
+      try {
+        const response = await getTodoList();
+        if (response.data) {
+          const formattedTodos = response.data.map(todo => ({
+            ...todo,
+            createdAt: new Date(todo.createdAt).toLocaleString('ko-KR')
+          }));
+          setTodos(formattedTodos);
+        }
+      } catch (error) {
+        console.error('Failed to load todos:', error);
+        if (error.response?.status === 401) {
+          alert('로그인이 필요합니다.');
+          navigate('/');
+        }
+      }
+    };
+    
+    if (isLoggedIn) {
+      loadTodos();
+    }
+  }, [isLoggedIn, navigate]);
+
+  useEffect(() => {
+    // todos의 전체 개수로 count 업데이트
+    const totalCount = todos.length;
+    
+    setLists(prevLists => prevLists.map(list => ({
+      ...list,
+      count: totalCount
+    })));
+  }, [todos]);
+
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
     setUsername('');
+    setTodos([]);
     navigate('/');
   };
+
   const getIcon = (type) => {
     return type === 'work' 
       ? <List className="w-6 h-6 text-blue-500" />
@@ -44,49 +83,47 @@ const Main = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-    {/* Navigation Bar */}
-    <nav className="bg-white shadow-md">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-gray-800">TODO & CALENDAR</h1>
-          </div>
-          <div className="flex items-center space-x-4">
-            {isLoggedIn ? (
-              <div className="flex items-center space-x-4">
-                <span className="text-green-600">{username}님</span>
-                <button
-                  onClick={handleLogout}
-                  className="flex items-center px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
-                >
-                  <LogOut className="w-4 h-4 mr-2" />
-                  로그아웃
-                </button>
-              </div>
-            ) : (
-              <>
-                <button
-                  onClick={() => navigate('/login')}
-                  className="flex items-center px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
-                >
-                  <LogIn className="w-4 h-4 mr-2" />
-                  로그인
-                </button>
-                <button
-                  onClick={() => navigate('/signup')}
-                  className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-green-600 transition-colors"
-                >
-                  <UserPlus className="w-4 h-4 mr-2" />
-                  회원가입
-                </button>
-              </>
-            )}
+      <nav className="bg-white shadow-md">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex-shrink-0">
+              <h1 className="text-xl font-bold text-gray-800">TODO & CALENDAR</h1>
+            </div>
+            <div className="flex items-center space-x-4">
+              {isLoggedIn ? (
+                <div className="flex items-center space-x-4">
+                  <span className="text-green-600">{username}님</span>
+                  <button
+                    onClick={handleLogout}
+                    className="flex items-center px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
+                  >
+                    <LogOut className="w-4 h-4 mr-2" />
+                    로그아웃
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <button
+                    onClick={() => navigate('/login')}
+                    className="flex items-center px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
+                  >
+                    <LogIn className="w-4 h-4 mr-2" />
+                    로그인
+                  </button>
+                  <button
+                    onClick={() => navigate('/signup')}
+                    className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-green-600 transition-colors"
+                  >
+                    <UserPlus className="w-4 h-4 mr-2" />
+                    회원가입
+                  </button>
+                </>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-      {/* Main Content */}
       <div className="w-full max-w-3xl mx-auto p-6">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-gray-800">나의 일정 관리</h1>
@@ -119,18 +156,18 @@ const Main = () => {
         </div>
 
         <div className="mt-8 flex justify-center">
-        <button
+          <button
             className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-green-600 
-                        transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 
-                        focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                      transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 
+                      focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={() => {
-                if (selectedList === 1) navigate('/todo');
-                if (selectedList === 2) navigate('/calendar');
+              if (selectedList === 1) navigate('/todo');
+              if (selectedList === 2) navigate('/calendar');
             }}
             disabled={!selectedList}
-            >
+          >
             선택한 리스트 열기
-            </button>
+          </button>
         </div>
       </div>
     </div>
