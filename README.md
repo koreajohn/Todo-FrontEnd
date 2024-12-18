@@ -37,6 +37,7 @@ npm start
 3. 일정 수정
  
 4. 일정 삭제
+   
 
 개인 일정(Calendar): 
 
