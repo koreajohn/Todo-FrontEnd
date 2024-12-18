@@ -9,8 +9,8 @@ const Main = () => {
   const [username, setUsername] = useState('');
   const [todos, setTodos] = useState([]);
   const [lists, setLists] = useState([
-    { id: 1, title: "업무 할일", count: 0, type: "work" },
-    { id: 2, title: "개인 일정", count: 0, type: "personal" }
+    { id: 1, title: "업무 할일 (Todo)", count: 0, type: "work" },
+    { id: 2, title: "개인 일정 (Calendar)", count: 0, type: "personal" }
   ]);
   const navigate = useNavigate();
 

@@ -4,21 +4,53 @@
 
 Todo List와 Calendar에서 일정을 등록하고 양방향으로 확인할 수 있는 통합 일정 관리 애플리케이션입니다.
 
+배포 서버 URL: https://todo-front-end-one.vercel.app
+
 🚀 실행 방법
 
 1️⃣ 프로젝트 클론
 
-clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
+원하는 경로에 폴더 생성 후 Git Bash Here 클릭 
+
+git init 
+
+git clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
 
 2️⃣ 프로젝트 설정
 
 VS Code나 IntelliJ 등 선호하는 IDE에서 프로젝트 오픈
-필요한 모듈 설치
-bashCopynpm install react-scripts
 
+필요한 모듈 설치
+
+새로운 터미널 생성 후
+
+npm install react-scripts
 
 3️⃣ 서버 실행
-bashCopynpm start
+npm start
+<br/>
+
+업무할일(Todo): 
+
+1. 일정 등록(등록시 개인일정과 동기화)
+   
+2. 할일 완료된 글은 체크눌러서 완료처리(실시간 완료율 통계 제공)
+ 
+3. 일정 수정
+ 
+4. 일정 삭제
+   
+
+개인 일정(Calendar): 
+
+1. 일정 등록(등록시 업무할일 과 개인일정에 동기화)
+
+2. 해당 월에 일정 검색 가능
+
+3. 일정 수정 
+
+4. 일정 삭제
+
 
 🛠️ 기술 스택
 
