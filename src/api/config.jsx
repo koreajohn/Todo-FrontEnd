@@ -1,4 +1,5 @@
-const API_SERVER_HOST = process.env.REACT_APP_SERVER_IP || 'http://localhost:8080';
+const API_SERVER_HOST = process.env.REACT_APP_SERVER_IP;
+//const API_SERVER_HOST = process.env.REACT_APP_SERVER_IP || 'http://localhost:8080';
 //const API_SERVER_HOST ='http://localhost:8080';
 console.log('API HOST:', API_SERVER_HOST); 
 
