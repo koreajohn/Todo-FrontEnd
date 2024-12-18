@@ -26,7 +26,8 @@ npm install react-scripts
 
 3️⃣ 서버 실행
 npm start
-</br>
+<br/>
+
 🛠️ 기술 스택
 
 <div align="center">
