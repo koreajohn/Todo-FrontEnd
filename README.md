@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+📅 Todo List & Calendar App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+💫 소개
 
-## Available Scripts
+Todo List와 Calendar에서 일정을 등록하고 양방향으로 확인할 수 있는 통합 일정 관리 애플리케이션입니다.
 
-In the project directory, you can run:
+🚀 실행 방법
 
-### `npm start`
+1️⃣ 프로젝트 클론
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2️⃣ 프로젝트 설정
 
-### `npm test`
+VS Code나 IntelliJ 등 선호하는 IDE에서 프로젝트 오픈
+필요한 모듈 설치
+bashCopynpm install react-scripts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+3️⃣ 서버 실행
+bashCopynpm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🛠️ 기술 스택
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div align="center">
+🌟 Tech Stack 🌟
+🎨 Frontend
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/Tailwind CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white"/>
+<img src="https://img.shields.io/badge/React Router-CA4245?style=flat-square&logo=react-router&logoColor=white"/>
+<img src="https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios&logoColor=white"/>
+<img src="https://img.shields.io/badge/Lucide React-808080?style=flat-square&logo=lucide&logoColor=white"/>
+🛠️ Tools
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
+<img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white"/>
+</div>
+</br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ 주요 기능
 
-### `npm run eject`
+⚡ 상태 관리
+<details>
+<summary><b>상세 보기</b></summary>
+기능
+useState
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Todo 목록, 캘린더 이벤트, 입력값 관리
+실시간 데이터 상태 업데이트
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+useEffect
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+데이터 로딩 및 JWT 토큰 검증
+API 통신 처리
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+사용 이유
 
-## Learn More
+컴포넌트 내의 동적 데이터 효율적 관리
+상태 변화에 따른 자동 리렌더링
+비동기 작업의 부작용 관리
+컴포넌트 생명주기 이벤트 처리
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+</details>
+🎯 사용자 입력 처리
+</br>
+<details>
+<summary><b>상세 보기</b></summary>
+기능
+useRef
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+입력 필드 포커스 최적화
+DOM 요소 직접 접근 관리
 
-### Code Splitting
+사용 이유
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+불필요한 리렌더링 방지
+DOM 요소의 직접적인 조작 가능
+포커스 관리를 통한 UX 향상
+컴포넌트 생명주기 간 값 유지
 
-### Analyzing the Bundle Size
+</details>
+🔄 라우팅
+</br>
+<details>
+<summary><b>상세 보기</b></summary>
+기능
+useNavigate
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+페이지 간 이동 처리
+인증 실패 시 리다이렉션
 
-### Making a Progressive Web App
+사용 이유
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+SPA 내 페이지 전환의 부드러운 처리
+프로그래매틱 네비게이션 구현
+보안 관련 리다이렉션 처리
+사용자 경험 최적화
 
-### Advanced Configuration
+</details>
+💅 UI/UX
+</br>
+<details>
+<summary><b>상세 보기</b></summary>
+기능
+Lucide React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+모던한 아이콘 시스템
+직관적인 사용자 인터페이스
 
-### Deployment
+사용 이유
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+일관된 디자인 언어 제공
+SVG 기반의 고품질 아이콘
+커스터마이징 용이성
+번들 사이즈 최적화
 
-### `npm run build` fails to minify
+</details>
+📊 커스텀 컴포넌트
+</br>
+<details>
+<summary><b>상세 보기</b></summary>
+기능
+TodoProgress
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+진행 상황 시각화
+재사용 가능한 모듈식 설계
+
+사용 이유
+
+코드 재사용성 극대화
+UI 일관성 유지
+유지보수 용이성
+컴포넌트 기반 개발 지원
+
+</details>
+<div align="center">
+© 2024 Todo List & Calendar App - Developed with ❤️ by koreajohn
+</div>
