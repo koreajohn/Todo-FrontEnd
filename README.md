@@ -13,14 +13,16 @@ clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
 2️⃣ 프로젝트 설정
 
 VS Code나 IntelliJ 등 선호하는 IDE에서 프로젝트 오픈
+
 필요한 모듈 설치
+
 npm install react-scripts
 
 src 하위경로에 첨부드린 .env 파일 생성
 
 
 3️⃣ 서버 실행
-bashCopynpm start
+npm start
 
 🛠️ 기술 스택
 
