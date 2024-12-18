@@ -8,13 +8,19 @@ Todo List와 Calendar에서 일정을 등록하고 양방향으로 확인할 수
 
 1️⃣ 프로젝트 클론
 
-clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
+원하는 경로에 폴더 생성 후 Git Bash Here 클릭 
+
+git init 
+
+git clone -b master https://github.com/koreajohn/Todo-FrontEnd.git
 
 2️⃣ 프로젝트 설정
 
 VS Code나 IntelliJ 등 선호하는 IDE에서 프로젝트 오픈
 
 필요한 모듈 설치
+
+새로운 터미널 생성 후
 
 npm install react-scripts
 
